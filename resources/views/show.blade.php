@@ -8,7 +8,7 @@ ${{ $comic->price }}<br>
 
 <a href="/comics/{{$comic->id}}/edit">Edit</a>
 
-<form action="/comics/delete" method="post">
+<form action="/comics/{{$comic->id}}" method="post">
     @csrf
     @method('DELETE')
     <input type="submit" value="delete">

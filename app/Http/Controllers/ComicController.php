@@ -64,7 +64,12 @@ class ComicController extends Controller
         return redirect('/comics/' . $id);
     }
 
-    public function destroy(Comic $comic)
+    public function destroy($id)
     {
+        $comic = Comic::find($id);
+
+        $comic->delete();
+
+        return redirect('/comics');
     }
 }
