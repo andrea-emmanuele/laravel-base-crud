@@ -19,3 +19,9 @@ Route::get('/', function () {
 });
 
 Route::get('/comics', [ComicController::class, 'index']);
+
+Route::get('/comics/{comic}', [ComicController::class, 'show']);
+
+/*Route::get('/comics', [ComicController::class, 'index']);*/
+
+

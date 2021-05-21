@@ -22,7 +22,7 @@
     </head>
     <body class="antialiased">
         @foreach($comics as $comic)
-            {{ $comic->title }} <br>
+            <a href="/comics/{{$comic->id}}">{{ $comic->title }}</a><br>
         @endforeach
     </body>
 </html>
