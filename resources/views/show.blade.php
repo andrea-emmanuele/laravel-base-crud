@@ -4,4 +4,12 @@
 ${{ $comic->price }}<br>
 {{ $comic->series }}<br>
 {{ $comic->sale_date }}<br>
-{{ $comic->type }}
+{{ $comic->type }}<br>
+
+<a href="/comics/{{$comic->id}}/edit">Edit</a>
+
+<form action="/comics/delete" method="post">
+    @csrf
+    @method('DELETE')
+    <input type="submit" value="delete">
+</form>

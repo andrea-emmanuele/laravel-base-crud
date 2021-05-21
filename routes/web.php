@@ -18,9 +18,19 @@ Route::get('/', function () {
     return redirect('/comics');
 });
 
+Route::delete('/comics/delete', [ComicController::class, 'destroy']);
+
+Route::post('/comics', [ComicController::class, 'store']);
+
 Route::get('/comics', [ComicController::class, 'index']);
 
+Route::get('/comics/create', [ComicController::class, 'create']);
+
 Route::get('/comics/{comic}', [ComicController::class, 'show']);
+
+Route::get('/comics/{comic}/edit', [ComicController::class, 'edit']);
+
+Route::put('/comics/{comic}', [ComicController::class, 'update']);
 
 /*Route::get('/comics', [ComicController::class, 'index']);*/
 

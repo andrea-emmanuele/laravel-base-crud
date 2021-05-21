@@ -24,5 +24,7 @@
         @foreach($comics as $comic)
             <a href="/comics/{{$comic->id}}">{{ $comic->title }}</a><br>
         @endforeach
+        <br>
+        <a href="/comics/create">Add new</a>
     </body>
 </html>
